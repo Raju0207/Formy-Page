@@ -1,6 +1,6 @@
 import time
 from tests.base_test import Base_Test
-#from pages.registration_page import Registration_Page
+# from pages.registration_page import Registration_Page
 from pages.formy_page import Formy_Page
 from testdata.data import Data
 
@@ -9,7 +9,7 @@ class Formy_Test(Base_Test):
     def test_formy_autocomplete_data(self):
         acp = Formy_Page(self.driver)
 
-        # Autocomplete Page
+        # Autocomplete
         acp.select_autocomplete()
         time.sleep(2)
         acp.enter_address(Data.ADDRESS)
@@ -27,8 +27,9 @@ class Formy_Test(Base_Test):
         acp.enter_country(Data.COUNTRY)
         time.sleep(2)
 
-        # Buttons Page
-     def test_formy_buttons(self):
+        # Buttons
+
+    def test_formy_buttons(self):
         bp = Formy_Page(self.driver)
         bp.select_buttons()
         time.sleep(2)

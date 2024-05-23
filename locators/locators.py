@@ -41,7 +41,6 @@ class Locators:
     # month = By.XPATH, '//select[@ng-model="monthbox"]'
     # day = By.ID, 'daybox'
 
-    # autocomplete
 
     # Autocomplete Page
     autocomplete = By.XPATH, '//a[@class="btn btn-lg" and @href="/autocomplete"]'
