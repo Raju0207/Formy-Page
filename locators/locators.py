@@ -77,5 +77,5 @@ class Locators:
 
     # Datepicker
     datepicker = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/datepicker" ]'
-    datepicker1 = By.XPATH, '//input[@id = "datepicker"]'
-    datepicker2 = By.XPATH, '//td[@class="today active day" and text()="26"]'
+    datepickerTextBox = By.XPATH, '//input[@id = "datepicker"]'
+    currentDate = By.XPATH, '//td[@class="today day"]'

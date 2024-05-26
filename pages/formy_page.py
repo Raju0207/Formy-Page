@@ -120,11 +120,11 @@ class Formy_Page(Base_Page):
     def select_datepicker(self):
         self.click_element(self.locator.datepicker)
 
-    def select_datepicker1(self):
-        self.click_element(self.locator.datepicker1)
+    def select_datepicker_textbox(self):
+        self.click_element(self.locator.datepickerTextBox)
 
-    def select_datepicker2(self):
-        self.click_element(self.locator.datepicker2)
+    def select_current_date(self):
+        self.click_element(self.locator.currentDate)
 
     # def is_valid_email(self):
     #     return validate_email(self)
