@@ -79,3 +79,11 @@ class Locators:
     datepicker = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/datepicker" ]'
     datepickerTextBox = By.XPATH, '//input[@id = "datepicker"]'
     currentDate = By.XPATH, '//td[@class="today day"]'
+
+    # Drag and Drop
+    dragAndDropButton = By.XPATH, '//li/a[@href="/dragdrop"]'
+    # sourceLocation = By.XPATH, '(//li[@class="ui-widget-content ui-corner-tr ui-draggable ui-draggable-handle"])[4]'
+    # destinationLocation = By.XPATH, '//div[@id="trash"]'
+    sourceLocation = By.ID, 'image'
+    destinationLocation = By.ID, 'box'
+    iframe = By.XPATH, '//iframe[@class="demo-frame lazyloaded"]'

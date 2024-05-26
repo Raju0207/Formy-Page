@@ -126,6 +126,15 @@ class Formy_Page(Base_Page):
     def select_current_date(self):
         self.click_element(self.locator.currentDate)
 
+    def click_drag_and_drop_button(self):
+        self.click_element(self.locator.dragAndDropButton)
+
+    def drag_and_drop(self):
+        self.perform_drag_and_drop(self.locator.sourceLocation, self.locator.destinationLocation)
+
+    def switch_to_iframe_for_drag_and_drop(self):
+        self.switch_to_iframe(self.locator.iframe)
+
     # def is_valid_email(self):
     #     return validate_email(self)
     #
@@ -200,4 +209,3 @@ class Formy_Page(Base_Page):
     def select_day(self):
         select = Select(self.get_element(self.locator.day))
         select.select_by_value('20')
-

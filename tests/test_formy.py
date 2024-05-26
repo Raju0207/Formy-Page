@@ -90,3 +90,13 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         dp.select_current_date()
         time.sleep(2)
+
+    def test_drag_and_drop(self):
+        dd = Formy_Page(self.driver)
+        time.sleep(2)
+        dd.click_drag_and_drop_button()
+        time.sleep(2)
+        # dd.switch_to_iframe_for_drag_and_drop()
+        time.sleep(2)
+        dd.drag_and_drop()
+        time.sleep(5)
