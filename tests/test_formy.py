@@ -8,11 +8,12 @@ from testdata.data import Data
 class Formy_Test(Base_Test):
     def test_formy_autocomplete_data(self):
         acp = Formy_Page(self.driver)
-
-        # Autocomplete
+        # Autocomplete Page
         acp.select_autocomplete()
         time.sleep(2)
         acp.enter_address(Data.ADDRESS)
+        time.sleep(2)
+        acp.select_ok_button()
         time.sleep(2)
         acp.enter_street_address(Data.STREETADDRESS)
         time.sleep(2)
@@ -27,7 +28,7 @@ class Formy_Test(Base_Test):
         acp.enter_country(Data.COUNTRY)
         time.sleep(2)
 
-        # Buttons
+        # Buttons Page
 
     def test_formy_buttons(self):
         bp = Formy_Page(self.driver)
@@ -60,4 +61,32 @@ class Formy_Test(Base_Test):
         bp.select_dropdown_link1()
         time.sleep(2)
         bp.select_dropdown_link2()
+        time.sleep(2)
+
+        # CheckBox
+
+    def test_formy_checkbox(self):
+        cbp = Formy_Page(self.driver)
+        cbp.select_checkbox()
+        time.sleep(2)
+        print(f"Should: False ==== {cbp.is_checkbox1_checkbox_selected()}")
+        cbp.select_checkbox1()
+        print(f"Should: True ==== {cbp.is_checkbox1_checkbox_selected()}")
+        time.sleep(2)
+        print(f"Should: False ==== {cbp.is_checkbox2_checkbox_selected()}")
+        cbp.select_checkbox2()
+        print(f"Should: True ==== {cbp.is_checkbox2_checkbox_selected()}")
+        time.sleep(2)
+        print(f"Should: False ==== {cbp.is_checkbox3_checkbox_selected()}")
+        cbp.select_checkbox3()
+        print(f"Should: True ==== {cbp.is_checkbox3_checkbox_selected()}")
+        time.sleep(2)
+
+    def test_formy_datepicker(self):
+        dp = Formy_Page(self.driver)
+        dp.select_datepicker()
+        time.sleep(2)
+        dp.select_datepicker1()
+        time.sleep(2)
+        dp.select_datepicker2()
         time.sleep(2)

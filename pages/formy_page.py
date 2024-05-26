@@ -23,6 +23,9 @@ class Formy_Page(Base_Page):
     def enter_address(self, address):
         self.enter_at(self.locator.Address, address)
 
+    def select_ok_button(self):
+        self.click_element(self.locator.OK_Button)
+
     def enter_street_address(self, streetaddress):
         self.enter_at(self.locator.Street_address, streetaddress)
 
@@ -79,7 +82,7 @@ class Formy_Page(Base_Page):
         self.click_element(self.locator.One_Button)
 
     def select_2button(self):
-        self.click_element(self.locator.Success_Button)
+        self.click_element(self.locator.Two_Button)
 
     def select_dropdown(self):
         self.click_element(self.locator.Dropdown)
@@ -89,6 +92,39 @@ class Formy_Page(Base_Page):
 
     def select_dropdown_link2(self):
         self.click_element(self.locator.Dropdown_Link2)
+
+    # CheckBox
+
+    def select_checkbox(self):
+        self.click_element(self.locator.checkbox)
+
+    def select_checkbox1(self):
+        self.click_element(self.locator.checkbox1)
+
+    def is_checkbox1_checkbox_selected(self):
+        return self.is_selected(self.locator.checkbox1)
+
+    def select_checkbox2(self):
+        self.click_element(self.locator.checkbox2)
+
+    def is_checkbox2_checkbox_selected(self):
+        return self.is_selected(self.locator.checkbox2)
+
+    def select_checkbox3(self):
+        self.click_element(self.locator.checkbox3)
+
+    def is_checkbox3_checkbox_selected(self):
+        return self.is_selected(self.locator.checkbox3)
+
+    # Datepicker
+    def select_datepicker(self):
+        self.click_element(self.locator.datepicker)
+
+    def select_datepicker1(self):
+        self.click_element(self.locator.datepicker1)
+
+    def select_datepicker2(self):
+        self.click_element(self.locator.datepicker2)
 
     # def is_valid_email(self):
     #     return validate_email(self)

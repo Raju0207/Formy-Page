@@ -41,10 +41,10 @@ class Locators:
     # month = By.XPATH, '//select[@ng-model="monthbox"]'
     # day = By.ID, 'daybox'
 
-
     # Autocomplete Page
     autocomplete = By.XPATH, '//a[@class="btn btn-lg" and @href="/autocomplete"]'
     Address = By.XPATH, '//input[@placeholder = "Enter address"]'
+    OK_Button = By.XPATH, '//button[@class = "dismissButton"]'
     Street_address = By.XPATH, '//input[@id="street_number"]'
     Street_address2 = By.XPATH, '//input[@id="route"]'
     city = By.XPATH, '//input[@id = "locality"]'
@@ -68,3 +68,14 @@ class Locators:
     Dropdown = By.XPATH, '//button[@id = "btnGroupDrop1"]'
     Dropdown_Link1 = By.XPATH, '//a[text()="Dropdown link 1"]'
     Dropdown_Link2 = By.XPATH, '//a[text()="Dropdown link 2"]'
+
+    # Check Box Page
+    checkbox = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/checkbox" ]'
+    checkbox1 = By.ID, "checkbox-1"
+    checkbox2 = By.ID, "checkbox-2"
+    checkbox3 = By.ID, "checkbox-3"
+
+    # Datepicker
+    datepicker = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/datepicker" ]'
+    datepicker1 = By.XPATH, '//input[@id = "datepicker"]'
+    datepicker2 = By.XPATH, '//td[@class="today active day" and text()="26"]'
