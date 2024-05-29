@@ -126,6 +126,7 @@ class Formy_Page(Base_Page):
     def select_current_date(self):
         self.click_element(self.locator.currentDate)
 
+        # Drag and Drop
     def click_drag_and_drop_button(self):
         self.click_element(self.locator.dragAndDropButton)
 
@@ -182,6 +183,70 @@ class Formy_Page(Base_Page):
 
     def is_radio_button3_selected(self):
         return self.is_selected(self.locator.radio_button3)
+
+        # Complete Web Form
+    def select_complete_web_form(self):
+        self.click_element(self.locator.complete_web_form)
+
+    def enter_first_name(self, firstname):
+        self.enter_at(self.locator.first_name, firstname)
+
+    def enter_last_name(self, lastname):
+        self.enter_at(self.locator.last_name, lastname)
+
+    def enter_job_title(self, job_title):
+        self.enter_at(self.locator.job_title, job_title)
+
+    def select_high_school(self):
+        self.click_element(self.locator.high_school)
+
+    def select_college(self):
+        self.click_element(self.locator.college)
+
+    def select_grad_school(self):
+        self.click_element(self.locator.grad_school)
+
+    def is_high_school_selected(self):
+        return self.is_selected(self.locator.high_school)
+
+    def is_college_selected(self):
+        return self.is_selected(self.locator.college)
+
+    def is_grad_school_selected(self):
+        return self.is_selected(self.locator.grad_school)
+
+    def select_male_checkbox(self):
+        self.click_element(self.locator.male_checkbox)
+
+    def is_male_checkbox_selected(self):
+        return self.is_selected(self.locator.male_checkbox)
+
+    def select_female_checkbox(self):
+        self.click_element(self.locator.female_checkbox)
+
+    def is_female_checkbox_selected(self):
+        return self.is_selected(self.locator.female_checkbox)
+
+    def select_prefer_checkbox(self):
+        self.click_element(self.locator.prefer_checkbox)
+
+    def is_prefer_checkbox_selected(self):
+        return self.is_selected(self.locator.prefer_checkbox)
+
+    def select_year_of_experience(self):
+        select = Select(self.get_element(self.locator.years_of_experience))
+        # select.select_by_index(1)
+        # select.select_by_value("Analytics")
+        select.select_by_visible_text("0-1")
+
+    def select_datepicker_textbox1(self):
+        self.click_element(self.locator.datepicker_textbox)
+
+    def select_current_date1(self):
+        self.click_element(self.locator.current_date)
+
+    def select_submit_button(self):
+        self.click_element(self.locator.submit_button)
 
     # def is_valid_email(self):
     #     return validate_email(self)

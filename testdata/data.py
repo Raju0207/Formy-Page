@@ -22,3 +22,6 @@ class Data:
     STATE = "DHAKA"
     ZIPCODE = "1216"
     COUNTRY = "BANGLADESH"
+    First_name = "MD"
+    Last_name = "LEON"
+    Job_title = "Sr. SQA Engineer"

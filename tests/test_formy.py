@@ -29,7 +29,6 @@ class Formy_Test(Base_Test):
         time.sleep(2)
 
         # Buttons Page
-
     def test_formy_buttons(self):
         bp = Formy_Page(self.driver)
         bp.select_buttons()
@@ -64,7 +63,6 @@ class Formy_Test(Base_Test):
         time.sleep(2)
 
         # CheckBox
-
     def test_formy_checkbox(self):
         cbp = Formy_Page(self.driver)
         cbp.select_checkbox()
@@ -82,8 +80,7 @@ class Formy_Test(Base_Test):
         print(f"Should: True ==== {cbp.is_checkbox3_checkbox_selected()}")
         time.sleep(2)
 
-        #DatePicker
-
+        #Date Picker
     def test_formy_datepicker(self):
         dp = Formy_Page(self.driver)
         dp.select_datepicker()
@@ -94,7 +91,6 @@ class Formy_Test(Base_Test):
         time.sleep(2)
 
         #Drag and Drop
-
     def test_drag_and_drop(self):
         dd = Formy_Page(self.driver)
         time.sleep(2)
@@ -105,6 +101,7 @@ class Formy_Test(Base_Test):
         dd.drag_and_drop()
         time.sleep(5)
 
+        # Dropdown
     def test_dropdown(self):
         dp = Formy_Page(self.driver)
         time.sleep(2)
@@ -115,6 +112,7 @@ class Formy_Test(Base_Test):
         dp.select_dropdown_menu_show()
         time.sleep(5)
 
+        # File Upload
     def test_file_upload(self):
         ful = Formy_Page(self.driver)
         time.sleep(2)
@@ -125,6 +123,7 @@ class Formy_Test(Base_Test):
         ful.upload_photo()
         time.sleep(3)
 
+        # Radio Button
     def test_radio_button(self):
         rb = Formy_Page(self.driver)
         time.sleep(2)
@@ -143,3 +142,49 @@ class Formy_Test(Base_Test):
         print(f"Should: True--------->{rb.is_radio_button3_selected()}")
         time.sleep(5)
 
+        # Complete Web Form
+    def test_complete_web_form(self):
+        cwf = Formy_Page(self.driver)
+        time.sleep(2)
+        cwf.select_complete_web_form()
+        time.sleep(2)
+        cwf.enter_first_name(Data.First_name)
+        time.sleep(2)
+        cwf.enter_last_name(Data.Last_name)
+        time.sleep(2)
+        cwf.enter_job_title(Data.Job_title)
+        time.sleep(2)
+        # Checkbox
+        print(f" Should: False------>{cwf.is_high_school_selected()}")
+        cwf.select_high_school()
+        print(f"Should: True--------->{cwf.is_high_school_selected()}")
+        time.sleep(5)
+        print(f" Should: False------>{cwf.is_college_selected()}")
+        cwf.select_college()
+        print(f"Should: True--------->{cwf.is_college_selected()}")
+        time.sleep(5)
+        print(f" Should: False------>{cwf.is_grad_school_selected()}")
+        cwf.select_grad_school()
+        print(f"Should: True--------->{cwf.is_grad_school_selected()}")
+        time.sleep(5)
+        # Radio Button
+        print(f"Should: False ==== {cwf.is_male_checkbox_selected()}")
+        cwf.select_male_checkbox()
+        print(f"Should: True ==== {cwf.is_male_checkbox_selected()}")
+        time.sleep(2)
+        print(f"Should: False ==== {cwf.is_female_checkbox_selected()}")
+        cwf.select_female_checkbox()
+        print(f"Should: True ==== {cwf.is_female_checkbox_selected()}")
+        time.sleep(2)
+        print(f"Should: False ==== {cwf.is_prefer_checkbox_selected()}")
+        cwf.select_prefer_checkbox()
+        print(f"Should: True ==== {cwf.is_prefer_checkbox_selected()}")
+        time.sleep(2)
+        cwf.select_year_of_experience()
+        time.sleep(2)
+        cwf.select_datepicker_textbox1()
+        time.sleep(2)
+        cwf.select_current_date1()
+        time.sleep(2)
+        cwf.select_submit_button()
+        time.sleep(2)
