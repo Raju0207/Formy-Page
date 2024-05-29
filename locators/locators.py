@@ -76,7 +76,7 @@ class Locators:
     checkbox3 = By.ID, "checkbox-3"
 
     # Datepicker
-    datepicker = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/datepicker" ]'
+    datepicker = By.XPATH, '//li/a[@href = "/datepicker"]'
     datepickerTextBox = By.XPATH, '//input[@id = "datepicker"]'
     currentDate = By.XPATH, '//td[@class="today day"]'
 
@@ -87,3 +87,23 @@ class Locators:
     sourceLocation = By.ID, 'image'
     destinationLocation = By.ID, 'box'
     iframe = By.XPATH, '//iframe[@class="demo-frame lazyloaded"]'
+
+    #DropDown
+    dropdowm = By.XPATH, '//li/a[@href = "/dropdown"]'
+    dropdown_button = By.XPATH, '//button[@id = "dropdownMenuButton"]'
+    dropdown_menu_show = By.XPATH, '//div[@class = "dropdown-menu show"]'
+
+    # Enable and Disable
+    enable_and_disable = By.XPATH, '//li/a[@href = "/enabled"]'
+    disable_textbox = By.ID, 'disabledInput'
+    enable_textbox = By.XPATH, '//input[@id = "input"]'
+
+    # File Upload
+    file_upload = By.XPATH, '//li/a[@href = "/fileupload"]'
+    choose_file = By.XPATH, '//button[@class = "btn btn-secondary btn-choose"]'
+
+    # Radio Button
+    radio_button = By.XPATH, '//li/a[@href = "/radiobutton"]'
+    radio_button1 = By.XPATH, '//input[@id = "radio-button-1"]'
+    radio_button2 = By.XPATH, '//label[@for = "radio-button-2"]'
+    radio_button3 = By.XPATH, '//label[@for = "radio-button-3"]'

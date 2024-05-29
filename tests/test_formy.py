@@ -82,6 +82,8 @@ class Formy_Test(Base_Test):
         print(f"Should: True ==== {cbp.is_checkbox3_checkbox_selected()}")
         time.sleep(2)
 
+        #DatePicker
+
     def test_formy_datepicker(self):
         dp = Formy_Page(self.driver)
         dp.select_datepicker()
@@ -90,6 +92,8 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         dp.select_current_date()
         time.sleep(2)
+
+        #Drag and Drop
 
     def test_drag_and_drop(self):
         dd = Formy_Page(self.driver)
@@ -100,3 +104,42 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         dd.drag_and_drop()
         time.sleep(5)
+
+    def test_dropdown(self):
+        dp = Formy_Page(self.driver)
+        time.sleep(2)
+        dp.click_dropdown()
+        time.sleep(2)
+        dp.click_dropdown_button()
+        time.sleep(2)
+        dp.select_dropdown_menu_show()
+        time.sleep(5)
+
+    def test_file_upload(self):
+        ful = Formy_Page(self.driver)
+        time.sleep(2)
+        ful.click_file_upload()
+        time.sleep(2)
+        # ful.click_choose_file()
+        # time.sleep(2)
+        ful.upload_photo()
+        time.sleep(3)
+
+    def test_radio_button(self):
+        rb = Formy_Page(self.driver)
+        time.sleep(2)
+        rb.select_radio_button()
+        time.sleep(4)
+        print(f" Should: False------>{rb.is_radio_button1_selected()}")
+        rb.select_radio_button1()
+        print(f"Should: True--------->{rb.is_radio_button1_selected()}")
+        time.sleep(5)
+        print(f" Should: False------>{rb.is_radio_button2_selected()}")
+        rb.select_radio_button2()
+        print(f"Should: True--------->{rb.is_radio_button2_selected()}")
+        time.sleep(5)
+        print(f" Should: False------>{rb.is_radio_button3_selected()}")
+        rb.select_radio_button3()
+        print(f"Should: True--------->{rb.is_radio_button3_selected()}")
+        time.sleep(5)
+

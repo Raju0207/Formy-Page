@@ -135,6 +135,54 @@ class Formy_Page(Base_Page):
     def switch_to_iframe_for_drag_and_drop(self):
         self.switch_to_iframe(self.locator.iframe)
 
+    def click_dropdown(self):
+        self.click_element(self.locator.dropdowm)
+
+    def click_dropdown_button(self):
+        self.click_element(self.locator.dropdown_button)
+
+    def select_dropdown_menu_show(self):
+        select = Select(self.get_element(self.locator.dropdown_menu_show))
+        # select.select_by_index(1)
+        # select.select_by_value("Buttons")
+        select.select_by_visible_text("Buttons")
+
+    def click_file_upload(self):
+        self.click_element(self.locator.file_upload)
+
+    def click_choose_file(self):
+        self.click_element(self.locator.choose_file)
+
+    def upload_photo(self):
+        upload_file = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "image/wallpaper-photo.jpg"))
+        # self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        file_input = self.get_element(self.locator.choose_file)
+        action = ActionChains(self.driver)
+        action.scroll_to_element(file_input).perform()
+        file_input.send_keys(upload_file)
+
+    def select_radio_button(self):
+        self.click_element(self.locator.radio_button)
+
+    def select_radio_button1(self):
+        self.click_element(self.locator.radio_button1)
+
+    def select_radio_button2(self):
+        self.click_element(self.locator.radio_button2)
+
+    def select_radio_button3(self):
+        self.click_element(self.locator.radio_button3)
+
+    def is_radio_button1_selected(self):
+        return self.is_selected(self.locator.radio_button1)
+
+    def is_radio_button2_selected(self):
+        return self.is_selected(self.locator.radio_button2)
+
+    def is_radio_button3_selected(self):
+        return self.is_selected(self.locator.radio_button3)
+
     # def is_valid_email(self):
     #     return validate_email(self)
     #
