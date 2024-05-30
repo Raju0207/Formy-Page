@@ -144,6 +144,18 @@ class Formy_Page(Base_Page):
         self.click_element(self.locator.enable_and_disable1)
         time.sleep(1)
 
+    def click_on_enable_disable_button(self):
+        self.click_element(self.locator.enable_and_disable)
+
+    def check_is_disabled(self):
+        result = self.is_enabled(self.locator.disable_textbox)
+        print(result)
+        return result
+
+    def check_is_enabled(self):
+        result = self.is_enabled(self.locator.enable_textbox)
+        print(result)
+        return result
     # def click_dropdown(self):
     #     self.click_element(self.locator.dropdowm)
     #

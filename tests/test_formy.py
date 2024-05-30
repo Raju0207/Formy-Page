@@ -80,7 +80,7 @@ class Formy_Test(Base_Test):
         print(f"Should: True ==== {cbp.is_checkbox3_checkbox_selected()}")
         time.sleep(2)
 
-    #Date Picker
+    # Date Picker
     def test_formy_datepicker(self):
         dp = Formy_Page(self.driver)
         dp.select_datepicker()
@@ -90,7 +90,7 @@ class Formy_Test(Base_Test):
         dp.select_current_date()
         time.sleep(2)
 
-    #Drag and Drop
+    # Drag and Drop
     def test_drag_and_drop(self):
         dd = Formy_Page(self.driver)
         time.sleep(2)
@@ -102,11 +102,18 @@ class Formy_Test(Base_Test):
         time.sleep(5)
 
         # Dropdown
+
     def test_dropdown(self):
         dp = Formy_Page(self.driver)
         time.sleep(2)
         dp.select_dropdown1()
         time.sleep(5)
+
+    def test_check_enabled_disable(self):
+        ed = Formy_Page(self.driver)
+        ed.click_on_enable_disable_button()
+        assert ed.check_is_disabled() == False
+        assert ed.check_is_enabled() == True
 
     # File Upload
     def test_file_upload(self):
