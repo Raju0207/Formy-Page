@@ -183,6 +183,21 @@ class Formy_Page(Base_Page):
         action.scroll_to_element(file_input).perform()
         file_input.send_keys(upload_file)
 
+    def click_on_key_and_mouse_press(self):
+        self.click_element(self.locator.key_press_button)
+
+    def enter_full_name(self):
+        self.enter_at(self.locator.enter_full_name_textbox, "asdfghjkl")
+
+    def select_all_text(self):
+        self.press_ctrl_a(self.locator.enter_full_name_textbox)
+
+    def delete_from_keyboard(self):
+        self.press_delete(self.locator.enter_full_name_textbox)
+
+    def click_button_by_mouse(self):
+        self.click_by_mouse(self.locator.button)
+
     def select_radio_button(self):
         self.click_element(self.locator.radio_button)
 

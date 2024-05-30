@@ -102,6 +102,10 @@ class Locators:
     file_upload = By.XPATH, '//li/a[@href = "/fileupload"]'
     choose_file = By.XPATH, '//input[@class="input-ghost"]'
 
+    # Key Press
+    key_press_button = By.XPATH, '(//a[@href="/keypress"])[2]'
+    enter_full_name_textbox = By.ID, 'name'
+    button = By.ID, 'button'
     # Radio Button
     radio_button = By.XPATH, '//li/a[@href = "/radiobutton"]'
     radio_button1 = By.XPATH, '//input[@id = "radio-button-1"]'

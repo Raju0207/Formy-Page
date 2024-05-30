@@ -126,6 +126,15 @@ class Formy_Test(Base_Test):
         ful.upload_photo()
         time.sleep(3)
 
+    def test_key_press(self):
+        kp = Formy_Page(self.driver)
+        kp.click_on_key_and_mouse_press()
+        kp.enter_full_name()
+        kp.select_all_text()
+        kp.delete_from_keyboard()
+        kp.click_button_by_mouse()
+        time.sleep(5)
+
     # Radio Button
     def test_radio_button(self):
         rb = Formy_Page(self.driver)

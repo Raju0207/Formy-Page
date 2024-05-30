@@ -1,6 +1,6 @@
 import time
 
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -23,6 +23,17 @@ class Base_Page():
 
     def enter_at(self, locator, data):
         self.get_element(locator).send_keys(data)
+
+    def press_ctrl_a(self, locator):
+        self.get_element(locator).send_keys(Keys.CONTROL, "a")
+
+    def press_delete(self, locator):
+        self.get_element(locator).send_keys(Keys.DELETE)
+
+    def click_by_mouse(self, locator):
+        action = ActionChains(self.driver)
+        element = self.get_element(locator)
+        action.move_to_element(element).click(element).perform()
 
     def get_text(self, locator):
         text = self.get_element(locator).text
