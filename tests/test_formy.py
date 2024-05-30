@@ -130,8 +130,11 @@ class Formy_Test(Base_Test):
         kp = Formy_Page(self.driver)
         kp.click_on_key_and_mouse_press()
         kp.enter_full_name()
+        time.sleep(2)
         kp.select_all_text()
+        time.sleep(1)
         kp.delete_from_keyboard()
+        time.sleep(1)
         kp.click_button_by_mouse()
         time.sleep(5)
 
