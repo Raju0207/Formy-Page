@@ -91,7 +91,7 @@ class Locators:
     #DropDown
     dropdowm = By.XPATH, '//li/a[@href = "/dropdown"]'
     dropdown_button = By.XPATH, '//button[@id = "dropdownMenuButton"]'
-    enable_and_disable1 = By.XPATH, '(//a[@class ="dropdown-item"])[7]'
+    enable_and_disable1 = By.XPATH, '(//a[@href="/enabled"])[2]'
 
     # Enable and Disable
     enable_and_disable = By.XPATH, '//li/a[@href = "/enabled"]'
@@ -100,7 +100,7 @@ class Locators:
 
     # File Upload
     file_upload = By.XPATH, '//li/a[@href = "/fileupload"]'
-    choose_file = By.XPATH, '//button[@class = "btn btn-secondary btn-choose"]'
+    choose_file = By.XPATH, '//input[@class="input-ghost"]'
 
     # Radio Button
     radio_button = By.XPATH, '//li/a[@href = "/radiobutton"]'

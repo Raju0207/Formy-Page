@@ -28,7 +28,7 @@ class Formy_Test(Base_Test):
         acp.enter_country(Data.COUNTRY)
         time.sleep(2)
 
-        # Buttons Page
+    # Buttons Page
     def test_formy_buttons(self):
         bp = Formy_Page(self.driver)
         bp.select_buttons()
@@ -62,7 +62,7 @@ class Formy_Test(Base_Test):
         bp.select_dropdown_link2()
         time.sleep(2)
 
-        # CheckBox
+    # CheckBox
     def test_formy_checkbox(self):
         cbp = Formy_Page(self.driver)
         cbp.select_checkbox()
@@ -80,7 +80,7 @@ class Formy_Test(Base_Test):
         print(f"Should: True ==== {cbp.is_checkbox3_checkbox_selected()}")
         time.sleep(2)
 
-        #Date Picker
+    #Date Picker
     def test_formy_datepicker(self):
         dp = Formy_Page(self.driver)
         dp.select_datepicker()
@@ -90,7 +90,7 @@ class Formy_Test(Base_Test):
         dp.select_current_date()
         time.sleep(2)
 
-        #Drag and Drop
+    #Drag and Drop
     def test_drag_and_drop(self):
         dd = Formy_Page(self.driver)
         time.sleep(2)
@@ -108,7 +108,7 @@ class Formy_Test(Base_Test):
         dp.select_dropdown1()
         time.sleep(5)
 
-        # File Upload
+    # File Upload
     def test_file_upload(self):
         ful = Formy_Page(self.driver)
         time.sleep(2)
@@ -119,7 +119,7 @@ class Formy_Test(Base_Test):
         ful.upload_photo()
         time.sleep(3)
 
-        # Radio Button
+    # Radio Button
     def test_radio_button(self):
         rb = Formy_Page(self.driver)
         time.sleep(2)
@@ -138,7 +138,7 @@ class Formy_Test(Base_Test):
         print(f"Should: True--------->{rb.is_radio_button3_selected()}")
         time.sleep(5)
 
-        # Complete Web Form
+    # Complete Web Form
     def test_complete_web_form(self):
         cwf = Formy_Page(self.driver)
         time.sleep(2)
