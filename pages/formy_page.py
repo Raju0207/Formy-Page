@@ -136,17 +136,25 @@ class Formy_Page(Base_Page):
     def switch_to_iframe_for_drag_and_drop(self):
         self.switch_to_iframe(self.locator.iframe)
 
-    def click_dropdown(self):
+    def select_dropdown1(self):
         self.click_element(self.locator.dropdowm)
-
-    def click_dropdown_button(self):
+        time.sleep(1)
         self.click_element(self.locator.dropdown_button)
+        time.sleep(1)
+        self.click_element(self.locator.enable_and_disable1)
+        time.sleep(1)
 
-    def select_dropdown_menu_show(self):
-        select = Select(self.get_element(self.locator.dropdown_menu_show))
-        # select.select_by_index(1)
-        # select.select_by_value("Buttons")
-        select.select_by_visible_text("Buttons")
+    # def click_dropdown(self):
+    #     self.click_element(self.locator.dropdowm)
+    #
+    # def click_dropdown_button(self):
+    #     self.click_element(self.locator.dropdown_button)
+
+    # def select_dropdown_menu_show(self):
+    #     select = Select(self.get_element(self.locator.dropdown_menu_show))
+    #     # select.select_by_index(1)
+    #     # select.select_by_value("Buttons")
+    #     select.select_by_visible_text("Buttons")
 
     def click_file_upload(self):
         self.click_element(self.locator.file_upload)
@@ -256,6 +264,19 @@ class Formy_Page(Base_Page):
     #     print("Valid email address")
     # else:
     #     print("Invalid email address")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     def select_male(self):
         self.click_element(self.locator.maleRadioButton)

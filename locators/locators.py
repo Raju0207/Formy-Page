@@ -91,7 +91,7 @@ class Locators:
     #DropDown
     dropdowm = By.XPATH, '//li/a[@href = "/dropdown"]'
     dropdown_button = By.XPATH, '//button[@id = "dropdownMenuButton"]'
-    dropdown_menu_show = By.XPATH, '//div[@class = "dropdown-menu show"]'
+    enable_and_disable1 = By.XPATH, '(//a[@class ="dropdown-item"])[7]'
 
     # Enable and Disable
     enable_and_disable = By.XPATH, '//li/a[@href = "/enabled"]'

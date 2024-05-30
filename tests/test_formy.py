@@ -105,11 +105,7 @@ class Formy_Test(Base_Test):
     def test_dropdown(self):
         dp = Formy_Page(self.driver)
         time.sleep(2)
-        dp.click_dropdown()
-        time.sleep(2)
-        dp.click_dropdown_button()
-        time.sleep(2)
-        dp.select_dropdown_menu_show()
+        dp.select_dropdown1()
         time.sleep(5)
 
         # File Upload
