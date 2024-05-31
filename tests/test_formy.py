@@ -203,3 +203,14 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         cwf.select_submit_button()
         time.sleep(2)
+
+    def test_modal(self):
+        md = Formy_Page(self.driver)
+        md.click_on_modal_button()
+        time.sleep(1)
+        md.click_on_open_modal_button()
+        time.sleep(2)
+        md.click_on_ok_button()
+        time.sleep(2)
+        md.click_on_close_button()
+        time.sleep(2)

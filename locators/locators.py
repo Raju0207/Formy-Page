@@ -127,3 +127,9 @@ class Locators:
     datepicker_textbox = By.XPATH, '//input[@id = "datepicker"]'
     current_date = By.XPATH, '//td[@class = "today day"]'
     submit_button = By.XPATH, '//a[@class = "btn btn-lg btn-primary"]'
+
+    # Modal
+    modalButton = By.XPATH, '(//li/a[@href="/modal"])[1]'
+    openModalButton = By.ID, 'modal-button'
+    okButton = By.ID, 'ok-button'
+    closeButton = By.ID, 'close-button'

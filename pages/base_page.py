@@ -53,3 +53,7 @@ class Base_Page():
 
     def switch_to_iframe(self, locator):
         self.driver.switch_to.frame(self.get_element(locator))
+
+    def switch_to_alert(self):
+        alert = self.driver.switch_to.alert()
+        # alert.accept()
