@@ -133,3 +133,8 @@ class Locators:
     openModalButton = By.ID, 'modal-button'
     okButton = By.ID, 'ok-button'
     closeButton = By.ID, 'close-button'
+
+    # Window
+    windowButton = By.XPATH, '//li/a[@href="/switch-window"]'
+    openNewTab = By.ID, 'new-tab-button'
+    alertButton = By.ID, 'alert-button'

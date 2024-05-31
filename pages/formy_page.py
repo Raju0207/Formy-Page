@@ -295,3 +295,13 @@ class Formy_Page(Base_Page):
 
     def click_on_close_button(self):
         self.click_element(self.locator.closeButton)
+
+    def click_on_switch_window_button(self):
+        self.click_element(self.locator.windowButton)
+
+    def click_on_open_new_tab(self):
+        self.click_element(self.locator.openNewTab)
+        self.open_new_tab()
+
+    def click_on_alert_button(self):
+        self.click_element(self.locator.alertButton)

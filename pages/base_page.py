@@ -55,8 +55,8 @@ class Base_Page():
         self.driver.switch_to.frame(self.get_element(locator))
 
     def switch_to_alert(self):
-        alert = self.driver.switch_to.alert()
-        # alert.accept()
+        alert = self.driver.switch_to.alert
+        alert.accept()
 
     def scroll_to_element(self, locator):
         element = self.get_element(locator)
@@ -70,3 +70,10 @@ class Base_Page():
 
     def scroll_into_bottom(self):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    def switch_to_active_tab(self):
+        # self.driver.switch_to.new_window('tab')
+        self.driver.switch_to.window(self.driver.window_handles[1])
+
+    def open_new_window(self):
+        self.driver.switch_to.new_window('window')
