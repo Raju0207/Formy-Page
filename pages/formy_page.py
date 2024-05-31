@@ -285,7 +285,6 @@ class Formy_Page(Base_Page):
 
     # Modal
     def click_on_modal_button(self):
-        # self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         self.click_element(self.locator.modalButton)
 
     def click_on_open_modal_button(self):

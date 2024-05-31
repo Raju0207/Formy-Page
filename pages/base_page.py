@@ -57,3 +57,16 @@ class Base_Page():
     def switch_to_alert(self):
         alert = self.driver.switch_to.alert()
         # alert.accept()
+
+    def scroll_to_element(self, locator):
+        element = self.get_element(locator)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+
+    def scroll_into_view(self, locator):
+        element = self.get_element(locator)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def scroll_into_bottom(self):
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
