@@ -323,7 +323,7 @@ class Formy_Page(Base_Page):
 
     def click_on_open_new_tab(self):
         self.click_element(self.locator.openNewTab)
-        self.open_new_tab()
+        self.switch_to_active_tab()
 
     def click_on_alert_button(self):
         self.click_element(self.locator.alertButton)

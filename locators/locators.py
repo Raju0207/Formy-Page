@@ -114,9 +114,9 @@ class Locators:
     closeButton = By.ID, 'close-button'
 
     # Page Scroll
-    page_scroll = '//li/a[@href = "/scroll"]'
-    full_name_scroll = '//input[@id = "name"]'
-    date = '//input[@id = "date"]'
+    page_scroll = By.XPATH, '//li/a[@href = "/scroll"]'
+    full_name_scroll = By.XPATH, '//input[@id = "name"]'
+    date = By.XPATH, '//input[@id = "date"]'
 
     # Radio Button
     radio_button = By.XPATH, '//li/a[@href = "/radiobutton"]'
