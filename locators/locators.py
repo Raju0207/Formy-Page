@@ -106,14 +106,31 @@ class Locators:
     key_press_button = By.XPATH, '(//a[@href="/keypress"])[2]'
     enter_full_name_textbox = By.ID, 'name'
     button = By.ID, 'button'
+
+    # Modal
+    modalButton = By.XPATH, '(//li/a[@href="/modal"])[1]'
+    openModalButton = By.ID, 'modal-button'
+    okButton = By.ID, 'ok-button'
+    closeButton = By.ID, 'close-button'
+
+    # Page Scroll
+    page_scroll = '//li/a[@href = "/scroll"]'
+    full_name_scroll = '//input[@id = "name"]'
+    date = '//input[@id = "date"]'
+
     # Radio Button
     radio_button = By.XPATH, '//li/a[@href = "/radiobutton"]'
     radio_button1 = By.XPATH, '//input[@id = "radio-button-1"]'
     radio_button2 = By.XPATH, '//label[@for = "radio-button-2"]'
     radio_button3 = By.XPATH, '//label[@for = "radio-button-3"]'
 
+    # Switch Window
+    windowButton = By.XPATH, '//li/a[@href="/switch-window"]'
+    openNewTab = By.ID, 'new-tab-button'
+    alertButton = By.ID, 'alert-button'
+
     # Complete Web Form
-    complete_web_form = By.XPATH, '//a[@class = "btn btn-lg" and @href = "/form"]'
+    complete_web_form = By.XPATH, '(//li/a[@href = "/form"])[2]'
     first_name = By.XPATH, '//input[@id = "first-name"]'
     last_name = By.XPATH, '//input[@id = "last-name"]'
     job_title = By.XPATH, '//input[@id = "job-title"]'
@@ -128,13 +145,5 @@ class Locators:
     current_date = By.XPATH, '//td[@class = "today day"]'
     submit_button = By.XPATH, '//a[@class = "btn btn-lg btn-primary"]'
 
-    # Modal
-    modalButton = By.XPATH, '(//li/a[@href="/modal"])[1]'
-    openModalButton = By.ID, 'modal-button'
-    okButton = By.ID, 'ok-button'
-    closeButton = By.ID, 'close-button'
 
-    # Window
-    windowButton = By.XPATH, '//li/a[@href="/switch-window"]'
-    openNewTab = By.ID, 'new-tab-button'
-    alertButton = By.ID, 'alert-button'
+

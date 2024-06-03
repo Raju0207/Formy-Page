@@ -25,3 +25,6 @@ class Data:
     First_name = "MD"
     Last_name = "LEON"
     Job_title = "Sr. SQA Engineer"
+    FULL_NAME = "MD MOYJUL LEON"
+    FULL_NAME_SCROLL = "MD RAJU"
+    DATE = "02/06/2024"

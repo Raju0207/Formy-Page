@@ -94,7 +94,6 @@ class Formy_Page(Base_Page):
         self.click_element(self.locator.Dropdown_Link2)
 
     # CheckBox
-
     def select_checkbox(self):
         self.click_element(self.locator.checkbox)
 
@@ -126,7 +125,7 @@ class Formy_Page(Base_Page):
     def select_current_date(self):
         self.click_element(self.locator.currentDate)
 
-        # Drag and Drop
+    # Drag and Drop
     def click_drag_and_drop_button(self):
         self.click_element(self.locator.dragAndDropButton)
 
@@ -136,6 +135,7 @@ class Formy_Page(Base_Page):
     def switch_to_iframe_for_drag_and_drop(self):
         self.switch_to_iframe(self.locator.iframe)
 
+    # Dropdown
     def select_dropdown1(self):
         self.click_element(self.locator.dropdowm)
         time.sleep(1)
@@ -144,6 +144,7 @@ class Formy_Page(Base_Page):
         self.click_element(self.locator.enable_and_disable1)
         time.sleep(1)
 
+    # Enabled and Disabled Elements
     def click_on_enable_disable_button(self):
         self.click_element(self.locator.enable_and_disable)
 
@@ -168,6 +169,7 @@ class Formy_Page(Base_Page):
     #     # select.select_by_value("Buttons")
     #     select.select_by_visible_text("Buttons")
 
+    # File Upload
     def click_file_upload(self):
         self.click_element(self.locator.file_upload)
 
@@ -183,6 +185,7 @@ class Formy_Page(Base_Page):
         action.scroll_to_element(file_input).perform()
         file_input.send_keys(upload_file)
 
+    # Keyboard and Mouse Press
     def click_on_key_and_mouse_press(self):
         self.click_element(self.locator.key_press_button)
 
@@ -198,6 +201,7 @@ class Formy_Page(Base_Page):
     def click_button_by_mouse(self):
         self.click_by_mouse(self.locator.button)
 
+    # Radio Button
     def select_radio_button(self):
         self.click_element(self.locator.radio_button)
 
@@ -296,6 +300,24 @@ class Formy_Page(Base_Page):
     def click_on_close_button(self):
         self.click_element(self.locator.closeButton)
 
+    # Page Scroll
+    def click_on_page_scroll(self):
+        self.click_element(self.locator.page_scroll)
+
+    def scroll_into_bottom(self):
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # def scroll_into_view(self, locator):
+    #     element = self.get_element(locator)
+    #     self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def enter_full_name_scroll(self, full_name_scroll):
+        self.enter_at(self.locator.full_name_scroll, full_name_scroll)
+
+    def enter_date(self, date):
+        self.enter_at(self.locator.date, date)
+
+    # Switch Window
     def click_on_switch_window_button(self):
         self.click_element(self.locator.windowButton)
 

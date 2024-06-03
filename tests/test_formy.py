@@ -8,7 +8,7 @@ from testdata.data import Data
 class Formy_Test(Base_Test):
     def test_formy_autocomplete_data(self):
         acp = Formy_Page(self.driver)
-        # Autocomplete Page
+    # Autocomplete Page
         acp.select_autocomplete()
         time.sleep(2)
         acp.enter_address(Data.ADDRESS)
@@ -59,6 +59,8 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         bp.select_dropdown_link1()
         time.sleep(2)
+        bp.select_dropdown()
+        time.sleep(2)
         bp.select_dropdown_link2()
         time.sleep(2)
 
@@ -101,14 +103,14 @@ class Formy_Test(Base_Test):
         dd.drag_and_drop()
         time.sleep(5)
 
-        # Dropdown
-
+    # Dropdown
     def test_dropdown(self):
         dp = Formy_Page(self.driver)
         time.sleep(2)
         dp.select_dropdown1()
         time.sleep(5)
 
+    # Enable and Disable
     def test_check_enabled_disable(self):
         ed = Formy_Page(self.driver)
         ed.click_on_enable_disable_button()
@@ -121,11 +123,10 @@ class Formy_Test(Base_Test):
         time.sleep(2)
         ful.click_file_upload()
         time.sleep(2)
-        # ful.click_choose_file()
-        # time.sleep(2)
         ful.upload_photo()
         time.sleep(3)
 
+    # Keyboard and Mouse Press
     def test_key_press(self):
         kp = Formy_Page(self.driver)
         kp.click_on_key_and_mouse_press()
@@ -137,6 +138,31 @@ class Formy_Test(Base_Test):
         time.sleep(1)
         kp.click_button_by_mouse()
         time.sleep(5)
+
+    # Modal
+    def test_modal(self):
+        md = Formy_Page(self.driver)
+        md.click_on_modal_button()
+        time.sleep(1)
+        md.click_on_open_modal_button()
+        time.sleep(2)
+        md.click_on_ok_button()
+        time.sleep(2)
+        md.click_on_close_button()
+        time.sleep(2)
+
+    # Page Scroll
+    def test_page_scroll(self):
+        ps = Formy_Page(self.driver)
+        time.sleep(3)
+        ps.click_on_page_scroll()
+        time.sleep(3)
+        # ps.scroll_into_view()
+        # time.sleep(2)
+        ps.scroll_into_bottom()
+        ps.enter_full_name_scroll(Data.FULL_NAME_SCROLL)
+        time.sleep(2)
+        ps.enter_date(Data.DATE)
 
     # Radio Button
     def test_radio_button(self):
@@ -155,6 +181,18 @@ class Formy_Test(Base_Test):
         print(f" Should: False------>{rb.is_radio_button3_selected()}")
         rb.select_radio_button3()
         print(f"Should: True--------->{rb.is_radio_button3_selected()}")
+        time.sleep(5)
+
+    # Switch Window
+    def test_switch_window(self):
+        wd = Formy_Page(self.driver)
+        wd.click_on_switch_window_button()
+        wd.click_on_open_new_tab()
+        time.sleep(2)
+        wd.click_on_switch_window_button()
+        wd.click_on_alert_button()
+        time.sleep(2)
+        wd.switch_to_alert()
         time.sleep(5)
 
     # Complete Web Form
@@ -204,24 +242,6 @@ class Formy_Test(Base_Test):
         cwf.select_submit_button()
         time.sleep(2)
 
-    def test_modal(self):
-        md = Formy_Page(self.driver)
-        md.click_on_modal_button()
-        time.sleep(1)
-        md.click_on_open_modal_button()
-        time.sleep(2)
-        md.click_on_ok_button()
-        time.sleep(2)
-        md.click_on_close_button()
-        time.sleep(2)
 
-    def test_switch_window(self):
-        wd = Formy_Page(self.driver)
-        wd.click_on_switch_window_button()
-        wd.click_on_open_new_tab()
-        time.sleep(2)
-        wd.click_on_switch_window_button()
-        wd.click_on_alert_button()
-        time.sleep(2)
-        wd.switch_to_alert()
-        time.sleep(5)
+
+
